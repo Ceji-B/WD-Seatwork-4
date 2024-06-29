@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Hanken%20Grotesk:700|Hanken%20Grotesk:400");
 
 :root {
-  --text: #c5c5d1;
-  --background: #191924;
-  --secondary: #2a2a3c;
-  --hover: #34344b;
-  --accent: #494969;
+  --text: #191941;
+  --background: #ffffff;
+  --secondary: #aae5ff;
+  --hover: #6c82cf;
+  --accent: #a7eaef;
 }
 
 h1 {
@@ -130,3 +130,5 @@ li.active {
     height: auto;
   }
 }
+
+
