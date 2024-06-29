@@ -47,7 +47,7 @@ gsap.set(
   }
 );
 
-while (i < 5) {
+while (i < 3) {
   tl.to(`#hero-${i} h2`, 0.9, {
     clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
     delay: del
