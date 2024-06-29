@@ -57,7 +57,7 @@
 
 <!-- TODO: To be changed -->
 <!-- The following are just sample -->
-Description of the project in details.
+The website is designed to showcase three popular tourist destinations in the Philippines, offering information and stunning visuals for each place, including attractions, activities, and travel tips.
 
 Guiding Question:
 - What is the project
@@ -68,9 +68,10 @@ Guiding Question:
 ### Key Components
 <!-- TODO: List of Key Components -->
 <!-- The following are just sample -->
-- MultiPage Website/Single Page Website
-- Parallax transition
-- Transactional
+- MultiPage Website
+- Booking Section
+- Visual Elements
+- Changing Pictures
 
 ### Technology
 <!-- TODO: List of Technology Used -->
