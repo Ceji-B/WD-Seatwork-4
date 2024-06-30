@@ -118,4 +118,9 @@ WD-ProjectName
 <!-- TODO: Add References -->
 | Title | Purpose | Link |
 |-|-|-|
-| Sample Title | Sample purpose would be here like this and this is the example of what it is. | trykolang.com |
+| Codepen Challenge | Used as the Landing Page and the Nav Section | https://codepen.io/Sicontis/pen/OJzOWxq |
+| Sample Title | Used the design and Layout for the Baguio feature | https://codepen.io/scottkellum/pen/poNXLYV |
+| Matierial Bootstrap Booking | Used as the Book Now Function | https://codepen.io/creativetim/pen/EgVBXa |
+| Sunrise Paradise | Used as a hero and the font | https://codepen.io/ecemgo/pen/BavreOY |
+| Collapse Gallery | Used for the Design on Palawan | https://codepen.io/TheMOZZARELLA/pen/bGJbPxE |
+| Content-Grid | Reference for making the design grid | https://codepen.io/kevinpowell/pen/OJYWMpE |
