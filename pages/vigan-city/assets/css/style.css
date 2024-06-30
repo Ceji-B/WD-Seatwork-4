@@ -20,9 +20,11 @@ h3 {
   font-size: 2rem;
 }
 
+
 p {
   font-size: 1rem;
   line-height: 175%;
+  max-width: 85%;
 }
 
 * {
@@ -53,7 +55,7 @@ main {
   flex-direction: row;
   justify-content: flex-start;
   position: relative;
-  width: 100%;
+  width: auto;
   gap: 5%;
 }
 
@@ -63,9 +65,23 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  width: 20%;
+  width: 15%;
   height: 100vh;
-  padding: 1rem;
+
+}
+
+#sidebar .logo{
+
+  margin-bottom: 1rem;
+  width: 10%;
+  height: 100vh;
+  
+}
+
+#sidebar .logo img {
+
+  height: 20px;
+
 }
 
 .progress-bar {
@@ -81,7 +97,6 @@ main {
 
 .content {
   position: relative;
-  max-width: 50%;
   padding: 0;
   
 }
@@ -130,3 +145,159 @@ li.active {
     height: auto;
   }
 }
+/* CSS for the "Vigan City" section */
+#section1 {
+  background-color: #dff3fd79;
+  color: rgb(27, 6, 66);
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.164);
+  
+}
+
+
+
+/* CSS for the "Destination" section */
+.places-to-visit {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; 
+  justify-content: space-between;
+}
+
+.place {
+  flex: 1 1 calc(33.333% - 20px); 
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  box-sizing: border-box; 
+}
+
+.place h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.place img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.place p {
+  font-size: 1em;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* CSS for the "Lodging" section */
+#section3 {
+  background-color: #dff3fd79;
+  color: rgb(15, 16, 35);
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.164);
+}
+
+#section3 h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.description {
+  font-size: 1em;
+  color: #666;
+  margin-bottom: 50px;
+  margin-left: 80px;
+  padding: 0 20px;
+}
+
+.lodging-gallery {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; 
+  justify-content: space-between; 
+}
+
+.lodging-item {
+  flex: 1 1 calc(33.333% - 20px); 
+  background-color: #e3e3e374;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  box-sizing: border-box; 
+}
+
+.lodging-item img {
+  width: 100%;
+  height: 60%;
+  border-radius: 8px;
+}
+
+.lodging-item p {
+
+margin-left: 25px;
+  color: #494949;
+  text-align: center;
+}
+
+/* CSS for the "Food" section */
+#section4 {
+
+  margin-right: 40px;
+
+.container {
+    
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 50px;
+    margin-left: 80px;
+    padding: 0 20px;
+}
+
+.food-items {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.food-item {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 200px;
+    text-align: center;
+}
+
+.food-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.food-item h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.food-item p {
+    color: #777;
+}
+
+}
+
