@@ -1,198 +1,641 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Mooli&display=swap");
 
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Comfortaa", cursive;
+}
+
 body {
-  font-family: "Poppins", sans-serif;
-
-  --black: #242424;
-  --white: #f5f5f5;
-  --pill: #e0d4be;
-  --red: #cc033f;
-}
-
-ul {
-  list-style: none;
-}
-
-.page-wrap {
-  position: relative;
+  min-height: 100dvh;
+  overflow-x: hidden;
+  background: #fff;
+  font-family: "Mooli", sans-serif;
 }
 
 header {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  min-height: 100vh;
-  overflow-x: hidden;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
 }
 
-/* NAV: Top Menu Section */
-nav {
-  width: 100%;
-  position: fixed;
-  z-index: 10;
-  padding: 1em 5em;
+.logo {
+  color: #112434;
+  font-weight: 700;
+  font-size: clamp(1.1rem, 6vw, 1.7rem);
+  text-decoration: none;
+}
+
+.navigation {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation li {
+  list-style: none;
+  margin-left: 20px;
+}
+
+.navigation li a {
+  text-decoration: none;
+  padding: 6px 15px;
+  color: #112434;
+  border-radius: 20px;
+  font-size: clamp(0.9rem, 6vw, 1rem);
+}
+
+.navigation li a:hover,
+.navigation li a.active {
+  background: #112434;
+  color: #fff;
+}
+
+.parallax {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150dvh;
+  background: rgb(206, 245, 223);
+  background: radial-gradient(
+    circle,
+    rgba(206, 245, 223, 0.4) 34%,
+    rgba(206, 245, 223, 1) 68%
+  );
+}
+
+.parallax img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+}
+
+#title {
+  position: absolute;
+  top: 13%;
+  font-size: clamp(2rem, 6vw, 4rem);
+  color: #000;
+  z-index: 50;
+}
+
+.blog {
+  position: relative;
+  padding: 120px 150px 20px;
+  background: #f6f0e7;
+}
+
+.blog::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: rgb(246, 240, 231);
+  background: radial-gradient(
+    circle,
+    rgba(246, 240, 231, 1) 54%,
+    rgba(0, 114, 125, 1) 99%
+  );
+  z-index: 999;
+}
+
+.blog h2 {
+  font-size: clamp(2rem, 6vw, 3rem);
+  color: #000;
+  margin: 60px 0 40px;
+  text-align: center;
+}
+
+.blog p {
+  font-size: clamp(1rem, 6vw, 1.3rem);
+  color: #000;
+  font-weight: 400;
+  margin-bottom: 30px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    to bottom,
+    rgba(206, 245, 223, 0.9),
+    rgba(164, 209, 198, 0.9),
+    rgba(128, 173, 172, 0.9),
+    rgba(72, 161, 170, 0.9)
+  );
+  border-radius: 20px;
+  list-style: none;
+  z-index: 1;
+  opacity: 0;
+  padding: 20px 40px;
+  transition: all 0.4s ease-in-out;
+}
+
+.overlay:hover {
+  opacity: 1;
+  cursor: default;
+}
+
+@media (max-width: 1300px) {
+  header {
+    padding: 30px 50px;
+  }
+  
+  #title {
+    top: 16%;
+  }
+  
+  .parallax {
+    height: 120dvh;
+  }
+  
+  .blog {
+    padding: 100px 120px 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .navigation li {
+    margin-left: 10px;
+  }
+
+  .parallax {
+    height: 100dvh;
+  }
+
+  #title {
+    top: 20%;
+  }
+
+  .blog {
+    padding: 90px 100px 20px;
+  }
+
+  .cards {
+    padding: 40px 40px;
+  }
+
+  .card h3 {
+    margin: 20px 0 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navigation li {
+    margin-left: 5px;
+  }
+  
+  header {
+    padding: 30px 10px;
+  }
+
+   #title {
+    top: 40%;
+  }
+  
+   .blog {
+    padding: 90px 40px 20px;
+  }
+  
+  .blog p {
+    font-size: 1rem;
+  }
+
+}
+
+article{
+
+
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 40px;
+  width: 100vw;
+  min-height: 100vh;
+  background: #f6f0e7;
+  font-family: "Mooli", sans-serif;
+  color: rgb(25, 23, 23);
+  overflow-x: hidden;
+
+
+article {
+  width: 100%;
+  max-width: 1265px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+figure {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin: 0 0 30px 0;
+}
+
+figure figcaption {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
   justify-content: space-between;
 }
 
-nav h1 {
-  font-size: clamp(1.2rem, 6vw, 3rem);
-  font-weight: normal;
-  text-transform: uppercase;
-  color: var(--white);
-  font-size: 1.3rem;
-  background-color: #ADD8E6;
-  padding: 5px 10px;
+figure figcaption h1 {
+  font-size: 2.5em;
+  font-family: "Mooli", sans-serif;
+  padding: 0 0 10px 0;
+  margin: 0 0 20px 0;
+  border-bottom: 1px solid #333;
+  text-wrap: balance;
 }
 
-nav ul {
-  display: flex;
-  color: var(--white);
+figure figcaption p {
+  color: #303030;
+  padding-left: 30px;
+  margin: 0;
+  border-left: 10px solid;
+  border-image: repeating-linear-gradient(
+      43deg,
+      rgb(179, 230, 255),
+      rgb(210, 209, 125) 4px,
+      transparent 5px,
+      transparent 9px,
+      rgb(185, 255, 159) 10px
+    )
+    10;
+  text-wrap: pretty;
 }
 
-nav ul li:not(#burger) {
-  visibility: hidden;
-  margin-right: 1.5em;
+figure figcaption p span:last-of-type {
+  display: none;
 }
 
-#burger {
-  width: min-content;
-  height: 28px;
+button {
+  font-family: "Mooli", sans-serif;
+  width: 200px;
+  height: 50px;
+  background-color: transparent;
+  border: 1px solid #666;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  cursor: pointer;
-}
-
-#burger span {
-  display: block;
-  height: 3px;
-  width: 22px;
-  background-color: var(--red);
-  border-radius: 200px;
-  transition: transform 0.3s 0.3s;
-}
-
-.active span:nth-of-type(1) {
-  transform: translateY(-3px) scaleX(1.3);
-}
-
-.active span:nth-of-type(3) {
-  transform: translateY(3px) scaleX(1.3);
-}
-
-/* MAIN: Slider Section */
-main {
-  width: 100vw;
-  height: 100vh;
+  align-items: center;
+  justify-content: center;
   position: relative;
   overflow: hidden;
 }
 
-article {
+button::after {
+  position: absolute;
+  right: 100%;
+  top: 0;
   width: 100%;
   height: 100%;
+  background-color: #ccc;
+  content: "";
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+
+button:hover::after {
+  right: 0;
+  transition: all 0.3s ease;
+}
+
+button input {
+  display: none;
+}
+
+button label {
   position: absolute;
+  width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
-  z-index: var(--i);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(41, 41, 41);
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.hero-info {
-  position: absolute;
-  top: 50%;
-  left: 5%;
-  transform: translateY(-50%);
-  z-index: 8;
+button:hover label {
+  color: black;
+  transition: all 0.3s ease;
 }
 
-.hero-info h2,
-.hero-info h1,
-.hero-info h3 {
-  opacity: 0;
-  transform: translateX(-50px);
-  animation: fadeInLeft 1s forwards;
+button label span {
+  display: none;
 }
 
-.hero-info h2 {
-  font-size: clamp(2rem, 9vw, 5rem);
-  line-height: clamp(2rem, 9vw, 5rem);
-  text-transform: uppercase;
+button:not(:has(input:checked)) label span:first-of-type {
+  display: initial;
 }
 
-.hero-info h1 {
-  color: var(--white);
-  font-size: clamp(3.2rem, 10vw, 7rem);
-  line-height: clamp(3.2rem, 10vw, 7rem);
-  text-transform: uppercase;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+button:has(input:checked) label span:last-of-type {
+  display: initial;
 }
 
-.hero-info h3 {
-  color: var(--white);
-  font-size: 1.6rem;
-  font-weight: normal;
-  margin-top: 2em;
-}
-
-@supports (-webkit-text-stroke: 3px var(--pill)) {
-  .hero-info h2 {
-    color: transparent;
-    -webkit-text-stroke: 3px var(--pill);
-    text-shadow: none;
-  }
-}
-
-.hero-image {
+section {
   width: 100%;
-  height: 100%;
+  height: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: stretch;
+  border-right: 1px solid #555;
+  border-bottom: 1px solid #555;
+  border-left: 1px solid #555;
+  transition: all 0.5s ease;
+  position: relative;
+}
+
+section::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background-image: linear-gradient(
+    90deg,
+    #00ff6e,
+    #00ff6e,
+    #00ff6e,
+    #00ff6e,
+    #00ff6e,
+    #00ff6e,
+    #00ff6e,
+    #00ff6e,
+    #00ff6e,
+    #00ff6e,
+    #00ff6e,
+    #00ff6e
+  );
+  content: "";
+  z-index: 2;
+  transition: all 1.2s ease;
+}
+
+figure:has(button input:checked) ~ section::before {
+  width: 0px;
+  transition: all 1.2s ease;
+}
+
+div {
+  flex-grow: 1;
+  opacity: 0;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  background-attachment: scroll;
+  transition: all 0.4s ease;
 }
 
-.hi-1 {
-  background-image: url("https://wallpapercave.com/wp/wp6904636.jpg");
+figure:has(button input:checked) ~ section {
+  height: 220px;
+  transition: all 0.5s ease;
 }
 
-/* SECTION: Overlay Menu Section */
-section {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 9;
-  min-height: 100vh;
-  padding: 8em 5em 2em 5em;
-  background-color: var(--white);
-  background-image: url("https://www.transparenttextures.com/patterns/church.png");
-  clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+figure:has(button input:checked) ~ section div,
+figure:has(button input:checked)
+  ~ section
+  div
+  + div
+  + div
+  + div
+  + div
+  + div
+  + div
+  + div
+  + div
+  + div
+  + div {
+  opacity: 1;
+  flex-grow: 2;
+  transition-delay: 0.15s;
 }
 
-/* About Palawan Section */
-.about-palawan {
-  padding: 2em 5em;
-  background-color: var(--white);
+figure:has(button input:checked) ~ section div + div,
+figure:has(button input:checked)
+  ~ section
+  div
+  + div
+  + div
+  + div
+  + div
+  + div
+  + div
+  + div
+  + div
+  + div {
+  opacity: 1;
+  transition-delay: 0.3s;
+  flex-grow: 3;
 }
 
-.about-palawan h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+figure:has(button input:checked) ~ section div + div + div,
+figure:has(button input:checked)
+  ~ section
+  div
+  + div
+  + div
+  + div
+  + div
+  + div
+  + div
+  + div
+  + div {
+  opacity: 1;
+  transition-delay: 0.45s;
+  flex-grow: 4;
 }
 
-.about-palawan p {
-  font-size: 1.1rem;
-  line-height: 1.6;
+figure:has(button input:checked) ~ section div + div + div + div,
+figure:has(button input:checked)
+  ~ section
+  div
+  + div
+  + div
+  + div
+  + div
+  + div
+  + div
+  + div {
+  opacity: 1;
+  transition-delay: 0.6s;
+  flex-grow: 5;
 }
 
-/* Fade In Left Animation */
-@keyframes fadeInLeft {
-  to {
-    opacity: 1;
-    transform: translateX(0);
+figure:has(button input:checked) ~ section div + div + div + div + div,
+figure:has(button input:checked)
+  ~ section
+  div
+  + div
+  + div
+  + div
+  + div
+  + div
+  + div {
+  opacity: 1;
+  transition-delay: 0.75s;
+  flex-grow: 6;
+}
+
+figure:has(button input:checked) ~ section div + div + div + div + div + div {
+  opacity: 1;
+  transition-delay: 0.9s;
+  flex-grow: 7;
+}
+
+section div:hover {
+  flex-grow: 2 !important;
+}
+
+section:has(div:hover) div:not(:hover) {
+  flex-grow: 1 !important;
+}
+
+section:has(div:hover) div {
+  transition-delay: 0s !important;
+}
+
+figure:has(button input:checked) ~ section div {
+  animation: pointerFix 1.7s linear 0s 1 normal;
+}
+
+@keyframes pointerFix {
+  0% {
+    pointer-events: none;
+  }
+  99% {
+    pointer-events: none;
+  }
+  100% {
+    pointer-events: initial;
   }
 }
+
+/* Change Gallery Images */
+
+section div:first-of-type {
+  background-image: url("https://www.kkday.com/en/blog/wp-content/uploads/ph_Philippines_Coron_Kayangan-Lake-%E9%8F%A1%E6%B9%96_Ashutterstock_491770084-1-1170x680.jpg");
+}
+
+section div + div {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs1UZcCSffzwbg8fAcc6LhvBzs1aiZjAIDfw&s");
+}
+
+section div + div + div {
+  background-image: url("https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1295,h_720/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/fig30j3ggze2jmswxsip/CoronUltimateIslandDayTour.jpg");
+}
+
+section div + div + div + div {
+  background-image: url("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/62/c4/22/caption.jpg?w=500&h=400&s=1");
+}
+
+section div + div + div + div + div {
+  background-image: url("https://ik.imagekit.io/tvlk/xpe-asset/AyJ40ZAo1DOyPyKLZ9c3RGQHTP2oT4ZXW+QmPVVkFQiXFSv42UaHGzSmaSzQ8DO5QIbWPZuF+VkYVRk6gh-Vg4ECbfuQRQ4pHjWJ5Rmbtkk=/2000622608423/Banana-Boat-and-Clear-Kayak-Experience-in-Coron-0cec965a-0781-4a0b-87e9-818bc575363b.jpeg?tr=q-60,c-at_max,w-1280,h-720&_src=imagekit");
+}
+
+section div + div + div + div + div + div {
+  background-image: url("https://images.squarespace-cdn.com/content/v1/5a8c2608dc2b4ac27e956b62/1565427164015-AXPBNYZAJZDLWZY9T11E/Parasail_cover_pic.jpg");
+}
+
+section div + div + div + div + div + div + div {
+  background-image: url("https://www.torntackies.com/wp-content/uploads/2018/01/Camping-in-El-Nido-is-one-of-the-best-things-to-do-in-Palawan-1024x683.jpg");
+}
+
+section div + div + div + div + div + div + div + div {
+  background-image: url("https://cdn.getyourguide.com/img/tour/51d0d9afd311b633.jpeg/97.jpg");
+}
+
+section div + div + div + div + div + div + div + div + div {
+  background-image: url("https://www.journeyera.com/wp-content/uploads/2019/04/untitled-Screen-Shot-2019-04-11-at-11.02.31-pm.jpg");
+}
+
+section div + div + div + div + div + div + div + div + div + div {
+  background-image: url("https://i0.wp.com/www.traveling-up.com/wp-content/uploads/2017/11/kamia-bay-resort-drone-shot-courtesy-of-aloha-palawan-1.jpg?ssl=1");
+}
+
+section div:last-of-type {
+  background-image: url("https://livingnomads.com/wp-content/uploads/2017/12/30/two-seasons-palawan-activities-3.jpg");
+}
+
+@media (max-width: 900px) {
+  figure {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  figure figcaption {
+    margin-bottom: 20px;
+  }
+  figure figcaption p span:first-of-type {
+    display: none;
+  }
+  figure figcaption p span:last-of-type {
+    display: initial;
+  }
+  button {
+    width: 100%;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 700px) {
+  figure figcaption {
+    max-width: unset;
+  }
+  button {
+    max-width: unset;
+  }
+}
+
+@media (max-width: 600px) {
+  section {
+    flex-direction: column;
+  }
+  figure:has(button input:checked) ~ section {
+    height: 1000px;
+  }
+}
+}
+
